@@ -10,68 +10,86 @@ $config = [
     'instructor' => 'Prof. Olumi'
 ];
 
-// Projects list
-$projects = [
-    [
-        'id' => 'portfolio-site',
-        'name' => 'Portfolio Site',
-        'description' => 'Professional portfolio website with admin panel',
-        'features' => ['Project showcase', 'Contact form', 'Admin dashboard'],
-        'status' => 'completed', // completed, in-progress, planned
-        'image' => 'pc-pool.jpg',
-        'due_date' => 'February 15, 2025',
-        'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript']
+// Projects list categorized by difficulty
+$projectCategories = [
+    'basic' => [
+        'title' => 'Basic Projects',
+        'description' => 'Foundational PHP applications focusing on core concepts and simple functionality.',
+        'projects' => [
+            [
+                'id' => 'portfolio-site',
+                'name' => 'Portfolio Site',
+                'description' => 'Professional portfolio website with admin panel',
+                'features' => ['Project showcase', 'Contact form', 'Admin dashboard'],
+                'status' => 'completed',
+                'image' => 'portfolio.jpg',
+                'due_date' => 'February 15, 2025',
+                'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript']
+            ],
+            [
+                'id' => 'user-authentication',
+                'name' => 'User Authentication',
+                'description' => 'Secure login and registration system',
+                'features' => ['Registration', 'Login', 'Password reset', 'Profile management'],
+                'status' => 'completed',
+                'image' => 'auth.jpg',
+                'due_date' => 'February 1, 2025',
+                'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'Security Practices']
+            ]
+        ]
     ],
-    // [
-    //     'id' => 'blog-system',
-    //     'name' => 'Blog System',
-    //     'description' => 'Full-featured blog with posts and comments',
-    //     'features' => ['Categories', 'Tags', 'User comments', 'Admin management'],
-    //     'status' => 'in-progress',
-    //     'image' => 'blog.jpg',
-    //     'due_date' => 'March 10, 2025',
-    //     'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'AJAX']
-    // ],
-    // [
-    //     'id' => 'e-commerce',
-    //     'name' => 'E-commerce Store',
-    //     'description' => 'Online shop with product catalog and checkout',
-    //     'features' => ['Product listings', 'Shopping cart', 'Checkout process'],
-    //     'status' => 'planned',
-    //     'image' => 'ecommerce.jpg',
-    //     'due_date' => 'April 5, 2025',
-    //     'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Payment API']
-    // ],
-    // [
-    //     'id' => 'task-manager',
-    //     'name' => 'Task Manager',
-    //     'description' => 'To-do list application with user accounts',
-    //     'features' => ['Task creation', 'Categories', 'Due dates', 'Notifications'],
-    //     'status' => 'in-progress',
-    //     'image' => 'tasks.jpg',
-    //     'due_date' => 'March 25, 2025',
-    //     'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript']
-    // ],
-    // [
-    //     'id' => 'user-authentication',
-    //     'name' => 'User Authentication',
-    //     'description' => 'Secure login and registration system',
-    //     'features' => ['Registration', 'Login', 'Password reset', 'Profile management'],
-    //     'status' => 'completed',
-    //     'image' => 'auth.jpg',
-    //     'due_date' => 'February 1, 2025',
-    //     'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'Security Practices']
-    // ],
-    // [
-    //     'id' => 'file-manager',
-    //     'name' => 'File Manager',
-    //     'description' => 'File upload and management system',
-    //     'features' => ['File upload', 'Organization', 'Sharing', 'Permissions'],
-    //     'status' => 'planned',
-    //     'image' => 'files.jpg',
-    //     'due_date' => 'April 20, 2025',
-    //     'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'File System API']
-    // ]
+    'intermediate' => [
+        'title' => 'Intermediate Projects',
+        'description' => 'More complex applications with advanced functionality and database interactions.',
+        'projects' => [
+            [
+                'id' => 'blog-system',
+                'name' => 'Blog System',
+                'description' => 'Full-featured blog with posts and comments',
+                'features' => ['Categories', 'Tags', 'User comments', 'Admin management'],
+                'status' => 'in-progress',
+                'image' => 'blog.jpg',
+                'due_date' => 'March 10, 2025',
+                'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'AJAX']
+            ],
+            [
+                'id' => 'task-manager',
+                'name' => 'Task Manager',
+                'description' => 'To-do list application with user accounts',
+                'features' => ['Task creation', 'Categories', 'Due dates', 'Notifications'],
+                'status' => 'in-progress',
+                'image' => 'tasks.jpg',
+                'due_date' => 'March 25, 2025',
+                'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript']
+            ]
+        ]
+    ],
+    'advanced' => [
+        'title' => 'Advanced Projects',
+        'description' => 'Sophisticated applications demonstrating mastery of PHP and related technologies.',
+        'projects' => [
+            [
+                'id' => 'e-commerce',
+                'name' => 'E-commerce Store',
+                'description' => 'Online shop with product catalog and checkout',
+                'features' => ['Product listings', 'Shopping cart', 'Checkout process', 'Payment integration'],
+                'status' => 'planned',
+                'image' => 'ecommerce.jpg',
+                'due_date' => 'April 5, 2025',
+                'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Payment API']
+            ],
+            [
+                'id' => 'file-manager',
+                'name' => 'File Manager',
+                'description' => 'File upload and management system',
+                'features' => ['File upload', 'Organization', 'Sharing', 'Permissions'],
+                'status' => 'planned',
+                'image' => 'files.jpg',
+                'due_date' => 'April 20, 2025',
+                'technologies' => ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'File System API']
+            ]
+        ]
+    ]
 ];
 
 // Helper function to get status badge class
@@ -88,11 +106,30 @@ function getStatusBadgeClass($status) {
     }
 }
 
+// Helper function to get category badge class
+function getCategoryBadgeClass($category) {
+    switch ($category) {
+        case 'basic':
+            return 'bg-green-100 text-green-800 border-green-200';
+        case 'intermediate':
+            return 'bg-blue-100 text-blue-800 border-blue-200';
+        case 'advanced':
+            return 'bg-purple-100 text-purple-800 border-purple-200';
+        default:
+            return 'bg-gray-100 text-gray-700 border-gray-200';
+    }
+}
+
 // Helper function to get placeholder image if actual image doesn't exist
 function getProjectImage($image) {
     // In a real scenario, you would check if the file exists
     // For now, we'll return a placeholder URL that uses the project's image name
-    return "./assets/images/{$image}";
+    return '';
+}
+
+function getPlaceholder() {
+       return 'https://www.interviewbit.com/blog/wp-content/uploads/2021/12/PHP-Projects.png'; 
+   
 }
 ?>
 <!DOCTYPE html>
@@ -114,21 +151,26 @@ function getProjectImage($image) {
         .project-image img {
             transition: transform 0.3s ease;
         }
+        .category-section {
+            scroll-margin-top: 2rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <header class="bg-white shadow sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
                 <div>
-                    <h1 class="text-3xl font-bold text-gray-900"><?php echo $config['site_name']; ?></h1>
-                    <p class="text-gray-600">
+                    <h1 class="text-2xl font-bold text-gray-900"><?php echo $config['site_name']; ?></h1>
+                    <p class="text-sm text-gray-600">
                         <?php echo $config['course']; ?> • <?php echo $config['semester']; ?>
                     </p>
                 </div>
-                <div class="mt-4 md:mt-0 flex space-x-1">
-                    <a href="#projects" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0088cc]">Projects</a>
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2">
+                    <a href="#basic" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0088cc]">Basic</a>
+                    <a href="#intermediate" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0088cc]">Intermediate</a>
+                    <a href="#advanced" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0088cc]">Advanced</a>
                     <a href="#about" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0088cc]">About</a>
                     <a href="<?php echo $config['github']; ?>" target="_blank" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0088cc] hover:bg-blue-800">
                         GitHub Repository
@@ -150,13 +192,15 @@ function getProjectImage($image) {
                     <p class="text-lg mb-6">
                         A collection of web applications developed during the <?php echo $config['course']; ?> course in <?php echo $config['semester']; ?>.
                     </p>
-                    <div class="flex space-x-1">
-                        <a href="#projects" class="px-4 py-2 bg-white text-[#0088cc] rounded-md font-medium">View Projects</a>
-                        <a href="#about" class="px-4 py-2 bg-blue-800 text-white rounded-md font-medium">Course Details</a>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#basic" class="px-4 py-2 bg-white text-[#0088cc] rounded-md font-medium">Basic Projects</a>
+                        <a href="#intermediate" class="px-4 py-2 bg-blue-800 text-white rounded-md font-medium">Intermediate Projects</a>
+                        <a href="#advanced" class="px-4 py-2 bg-blue-800 text-white rounded-md font-medium">Advanced Projects</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <img class="rounded-2xl max-w-sm" src="./assets/images/pc-pool.jpg" alt="pc pool">
+                    <!-- Hero illustration or image -->
+                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220407112705/Top-10-PHP-Projects-Ideas-For-Beginners.png" alt="PHP Projects" class="rounded-lg shadow-lg max-w-full h-auto" style="max-height: 300px;">
                 </div>
             </div>
         </div>
@@ -182,22 +226,57 @@ function getProjectImage($image) {
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-12">
+    <!-- Projects Overview -->
+    <section class="py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Course Projects</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    A series of PHP applications developed throughout the semester, showcasing various web development skills and techniques.
+                    A series of PHP applications developed throughout the semester, categorized by complexity level.
                 </p>
             </div>
             
+            <!-- Project Categories Navigation -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <a href="#basic" class="px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-[#0088cc] focus:z-10 focus:text-[#0088cc]">
+                        Basic
+                    </a>
+                    <a href="#intermediate" class="px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-[#0088cc] focus:z-10 focus:text-[#0088cc]">
+                        Intermediate
+                    </a>
+                    <a href="#advanced" class="px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100 hover:text-[#0088cc] focus:z-10 focus:text-[#0088cc]">
+                        Advanced
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <?php foreach ($projectCategories as $categoryKey => $category): ?>
+    <section id="<?php echo $categoryKey; ?>" class="py-8 category-section <?php echo $categoryKey !== 'basic' ? 'mt-6' : ''; ?>">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Category Header -->
+            <div class="mb-8 border-l-4 pl-4 <?php echo str_replace('bg-', 'border-', getCategoryBadgeClass($categoryKey)); ?>">
+                <h2 class="text-2xl font-bold text-gray-900"><?php echo $category['title']; ?></h2>
+                <p class="text-gray-600"><?php echo $category['description']; ?></p>
+            </div>
+            
+            <!-- Category Badge -->
+            <div class="mb-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border <?php echo getCategoryBadgeClass($categoryKey); ?>">
+                    <?php echo count($category['projects']); ?> Projects
+                </span>
+            </div>
+            
+            <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <?php foreach ($projects as $project): ?>
-                <div class="bg-white rounded-lg shadow overflow-hidden project-card hover:shadow-md transition">
+                <?php foreach ($category['projects'] as $project): ?>
+                    <div class="bg-white rounded-lg shadow overflow-hidden project-card hover:shadow-md transition">
                     <!-- Project Image -->
                     <div class="h-48 overflow-hidden project-image">
-                        <img src="<?php echo getProjectImage($project['image']); ?>" 
+                        <img src="<?php echo getPlaceholder(); ?>" 
                              alt="<?php echo $project['name']; ?>" 
                              class="w-full h-full object-cover">
                     </div>
@@ -256,33 +335,4 @@ function getProjectImage($image) {
         </div>
     </section>
 
-
-  
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p>© 2023 My Portfolio. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-gray-300">
-                        <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="hover:text-gray-300">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+    <?php endforeach; ?>
